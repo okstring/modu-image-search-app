@@ -62,7 +62,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
                         return GestureDetector(
                           onTap: () {
-                            context.push(Routes.detail);
+                            context.push(Routes.detail, extra: photos[index]);
                           },
                           child: Image.network(
                             photos[index].previewURL,

@@ -8,9 +8,11 @@ class Photo with _$Photo {
     required this.id,
     required this.tags,
     required this.previewURL,
+    required this.user
   });
 
   final int id;
   final String tags;
   final String previewURL;
+  final String user;
 }

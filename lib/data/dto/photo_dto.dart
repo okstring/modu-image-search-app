@@ -7,11 +7,13 @@ class PhotoDto {
   int id;
   String tags;
   String previewURL;
+  String user;
 
   PhotoDto({
     required this.id,
     required this.tags,
     required this.previewURL,
+    required this.user,
   });
   
   factory PhotoDto.fromJson(Map<String, dynamic> json) => _$PhotoDtoFromJson(json);
