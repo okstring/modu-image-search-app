@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:image_search_app/core/routing/router.dart';
+import 'package:image_search_app/presentation/home/home_scene.dart';
 
 void main() {
   runApp(const MyApp());
@@ -9,12 +11,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+    return MaterialApp.router(
+      routerConfig: AppRouter.router,
+      debugShowCheckedModeBanner: false,
     );
   }
 }
