@@ -3,6 +3,8 @@ import 'package:image_search_app/core/routing/routes.dart';
 import 'package:image_search_app/data/data_source/photo_data_source_impl.dart';
 import 'package:image_search_app/data/repository/photo_repository_impl.dart';
 import 'package:image_search_app/domain/use_case/photo_use_case.dart';
+import 'package:image_search_app/presentation/detail/detail_scene.dart';
+import 'package:image_search_app/presentation/detail/detail_view_model.dart';
 import 'package:image_search_app/presentation/home/home_scene.dart';
 import 'package:image_search_app/presentation/home/home_view_model.dart';
 
@@ -27,14 +29,8 @@ class AppRouter {
       GoRoute(
         path: Routes.detail,
         builder:
-            (context, state) => HomeScreen(
-              viewModel: HomeViewModel(
-                photoUseCase: PhotoUseCase(
-                  photoRepository: PhotoRepositoryImpl(
-                    photoDataSource: PhotoDataSourceImpl(),
-                  ),
-                ),
-              ),
+            (context, state) => DetailScreen(
+              viewModel: DetailViewModel(),
             ),
       ),
     ],

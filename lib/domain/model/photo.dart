@@ -7,10 +7,10 @@ class Photo with _$Photo {
   Photo({
     required this.id,
     required this.tags,
-    required this.imageURL,
+    required this.previewURL,
   });
 
   final int id;
   final String tags;
-  final String imageURL;
+  final String previewURL;
 }

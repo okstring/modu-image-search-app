@@ -6,12 +6,12 @@ part 'photo_dto.g.dart';
 class PhotoDto {
   int id;
   String tags;
-  String imageURL;
+  String previewURL;
 
   PhotoDto({
     required this.id,
     required this.tags,
-    required this.imageURL,
+    required this.previewURL,
   });
   
   factory PhotoDto.fromJson(Map<String, dynamic> json) => _$PhotoDtoFromJson(json);
