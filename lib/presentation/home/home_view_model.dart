@@ -4,7 +4,7 @@ import 'package:image_search_app/domain/model/photo_info.dart';
 import 'package:image_search_app/domain/use_case/photo_use_case.dart';
 import 'package:image_search_app/presentation/home/home_state.dart';
 
-class HomeViewModel extends ChangeNotifier {
+class HomeViewModel with ChangeNotifier {
   final PhotoUseCase _photoUseCase;
 
   HomeState _state = HomeState();

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:image_search_app/presentation/detail/detail_state.dart';
 
-class DetailViewModel extends ChangeNotifier {
+class DetailViewModel with ChangeNotifier {
   final DetailState _state;
   DetailState get state => _state;
 
