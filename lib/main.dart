@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:image_search_app/core/di/di_setup.dart';
 import 'package:image_search_app/core/routing/router.dart';
-import 'package:image_search_app/presentation/home/home_scene.dart';
 
 void main() {
+  diSetup();
+
   runApp(const MyApp());
 }
 

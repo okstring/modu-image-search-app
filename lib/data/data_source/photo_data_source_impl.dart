@@ -9,12 +9,10 @@ class PhotoDataSourceImpl implements PhotoDataSource {
   @override
   Future<PhotoInfoDto> fetchPhoto(String query) async {
     const baseUrl = 'pixabay.com';
-
     final queryParameters = {
       'key': '10711147-dc41758b93b263957026bdadb',
       'q': query
     };
-
     final url = Uri.https(baseUrl, '/api', queryParameters);
     final response = await http.get(url);
     final json = jsonDecode(response.body);
