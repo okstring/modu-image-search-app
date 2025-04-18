@@ -20,11 +20,11 @@ void diSetup() {
 
   getIt.registerSingleton<PhotoUseCase>(PhotoUseCase(photoRepository: getIt()));
 
-  getIt.registerFactory<HomeViewModel>(
+  getIt.registerCachedFactory<HomeViewModel>(
     () => HomeViewModel(photoUseCase: getIt()),
   );
 
-  getIt.registerFactoryParam<DetailViewModel, Photo, void>(
+  getIt.registerCachedFactoryParam<DetailViewModel, Photo, void>(
     (photo, _) => DetailViewModel(state: DetailState(photo: photo)),
   );
 }

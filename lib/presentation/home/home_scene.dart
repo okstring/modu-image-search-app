@@ -18,7 +18,17 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
     super.initState();
+
+    print('hohoho');
   }
+
+  @override
+  void dispose() {
+    super.dispose();
+    print("dhodhodhdohdohdohd");
+  }
+
+
 
   @override
   Widget build(BuildContext context) {

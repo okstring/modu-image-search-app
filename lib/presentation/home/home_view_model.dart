@@ -19,7 +19,6 @@ class HomeViewModel with ChangeNotifier {
 
     switch (result) {
       case Success<PhotoInfo, Exception>():
-        print(result.data);
         _state = _state.copyWith(photoInfo: result.data);
         notifyListeners();
         break;
